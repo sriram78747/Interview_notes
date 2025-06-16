@@ -1,0 +1,212 @@
+[
+      {
+        "Name": "What is Computer Networking?",
+        "Description": "Computer networking involves connecting two or more computing devices (like PCs, smartphones, servers, printers) to communicate and share resources. These networks help businesses, educational institutions, and homes to share:",
+        "Content": [
+          "Files and media",
+          "Internet access",
+          "Hardware (e.g., printers, scanners)",
+          "Applications and software services"
+        ],
+        "Note": "A network can be as simple as two connected computers or as vast as the internet, which connects millions of devices globally."
+      },
+      {
+        "Name": "Types of Networks",
+        "Discription": "Here are more use-case examples and comparisons:",
+        "Subheadings": [
+          {
+            "Name": "LAN (Local Area Network)",
+            "Content": [
+              "Used in homes, offices, schools",
+              "Example: Your home Wi-Fi with a few connected devices"
+            ]
+          },
+          {
+            "Name": "WAN (Wide Area Network)",
+            "Content": [
+              "Covers large geographical areas",
+              "Example: The internet connecting multiple cities and countries"
+            ]
+          },
+          {
+            "Name": "MAN (Metropolitan Area Network)",
+            "Content": [
+              "Connects users in a city or town",
+              "Often maintained by ISPs or government entities"
+            ]
+          },
+          {
+            "Name": "PAN (Personal Area Network)",
+            "Content": [
+              "Very limited range, typically 10 meters",
+              "Example: Connecting your mobile phone to wireless earphones or smartwatch"
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "Network Devices",
+        "Discription": "Additions and deeper functions:",
+        "Subheadings": [
+          {
+            "Name": "Router",
+            "Content": [
+              "Manages traffic between your network and the internet",
+              "Can assign IP addresses using DHCP",
+              "May offer port forwarding, firewall settings, and QoS (Quality of Service)"
+            ]
+          },
+          {
+            "Name": "Switch",
+            "Content": [
+              "Smarter than a hub; knows where to send data",
+              "Used in enterprise networks to connect many computers"
+            ]
+          },
+          {
+            "Name": "Modem",
+            "Content": [
+              "Stands for modulator-demodulator",
+              "Converts signals between digital (used by your devices) and analog (used by phone lines)"
+            ]
+          },
+          {
+            "Name": "Firewall",
+            "Content": [
+              "Can be hardware (external box) or software (like Windows Defender Firewall)",
+              "Blocks unauthorized access and filters malicious traffic"
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "Wired vs Wireless Networks",
+        "Subheadings": [
+          {
+            "Name": "Wired Pros:",
+            "Content": [
+              "Stable connection",
+              "Faster data transmission",
+              "More secure (harder to intercept)"
+            ]
+          },
+          {
+            "Name": "Wired Cons:",
+            "Content": ["Cables can clutter", "Less mobility"]
+          },
+          {
+            "Name": "Wireless Pros:",
+            "Content": [
+              "Convenient for mobile devices",
+              "Easy to expand the network"
+            ]
+          },
+          {
+            "Name": "Wireless Cons:",
+            "Content": [
+              "Susceptible to interference",
+              "Slower and less secure unless encrypted"
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "IP Addressing",
+        "Subheadings": [
+          {
+            "Name": "IP Address",
+            "Content": [
+              "A unique string (like 192.168.0.1) that identifies a device on a network."
+            ]
+          },
+          {
+            "Name": "Private vs Public IP",
+            "Content": [
+              "Private: Used within local networks; not routed on the internet",
+              "Public: Assigned by ISP for global access"
+            ]
+          },
+          {
+            "Name": "Static vs Dynamic IP",
+            "Content": [
+              "Static: Manually set; doesn't change",
+              "Dynamic: Assigned by DHCP; can change over time"
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "DNS (Domain Name System)",
+        "Description": "DNS acts like a Phonebook for the internet:",
+        "Content": [
+          "Converts human-friendly domain names (like facebook.com) into IP addresses (157.240.20.35)",
+          "Without DNS, we’d have to remember numerical IPs instead of names",
+          "DNS servers can be provided by your ISP or custom ones (e.g., Google DNS: 8.8.8.8)"
+        ]
+      },
+      {
+        "Name": "Protocols",
+        "Description": "Protocols are rules that define how data is transferred.",
+        "Subheadings": [
+          {
+            "Name": "Common Protocols",
+            "Content": [
+              "TCP (Transmission Control Protocol) – Ensures reliable and ordered data delivery",
+              "IP (Internet Protocol) – Routes data packets to their destination",
+              "HTTP/HTTPS – Used for web browsing (HTTPS is secure)",
+              "FTP – Used for transferring files",
+              "SMTP/IMAP/POP3 – Used for sending and receiving emails",
+              "DHCP – Assigns IP addresses automatically",
+              "DNS – Resolves domain names to IP addresses",
+              "ICMP – Used in diagnostic tools like ping"
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "OSI Model",
+        "Description": "A conceptual framework for how data travels:",
+        "Content": [
+          "Physical – Hardware (cables, ports).",
+          "Data Link – MAC addressing, switching.",
+          "Network – IP addressing, routing.",
+          "Transport – Reliable data transfer (TCP).",
+          "Session – Manages sessions.",
+          "Presentation – Data translation, encryption.",
+          "Application – Interfaces with user applications (e.g., browsers)."
+        ]
+      },
+      {
+        "Name": "Network Security Basics",
+        "Description": "More essential concepts:",
+        "Content": [
+          "WPA2/WPA3: – Wi-Fi encryption standards. Use WPA3 if available.",
+          "MAC Address Filtering: – Only allows specific devices to connect",
+          "VPN (Virtual Private Network): – Encrypts your internet traffic and hides your IP",
+          "Two-Factor Authentication (2FA): – Adds an extra layer of login security"
+        ],
+        "Note": "Avoid using public WI-FI without VPNs, as they're common places for hackers to snoop."
+      },
+      {
+        "Name": "Tools for Troubleshooting",
+        "Subheadings": [
+          {
+            "Name": "Basic Commands",
+            "Content": [
+              "ping <host> – Checks if a host is reachable",
+              "tracert <host> – Shows the path packets take to a host",
+              "ipconfig (Windows) / ifconfig (Linux/macOS) – Shows IP configuration",
+              "netstat – Displays network connections and ports in use",
+              "nslookup – Checks DNS resolution"
+            ]
+          },
+          {
+            "Name": "Advanced Tools",
+            "Content": [
+              "Wireshark – Packet sniffer for analyzing network traffic",
+              "Nmap – Network scanner for discovering hosts and services"
+            ]
+          }
+        ]
+      }
+    ]

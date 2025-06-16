@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>COMPUTER NETWORKING</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">COMPUTER NETWORKING</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul id = "ul_topics">
+        
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>What is Computer Networking?</h1>
+      <p>Computer networking involves connecting two or more computing devices (like PCs, smartphones, servers, printers) to 
+        <strong>communicate and share resources.</strong> These networks help businesses, educational institutions, and homes to share:</p><br>
+ 
+ <ul>
+  <li>Files and media</li><br>
+  <li>Internet access</li><br>
+  <li>Hardware (e.g., printers, scanners)</li><br>
+  <li>Applications and software services</li><br>
+ </ul>
+ <p>A network can be as simple as two connected computers or as vast as the internet, which connects millions of devices globally.</p>
+    </main>
+  </div>
+  <script >
+    
+  fetch('courses.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok " + response.statusText);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const ul = document.getElementById('ul_topics');
+      const main = document.querySelector('main');
+
+      data.forEach(section => {
+        const li = document.createElement('li');
+        li.textContent = section.Name;
+        li.style.cursor = 'pointer';
+
+        li.addEventListener('click', () => {
+          // Clear previous content
+          main.innerHTML = '';
+
+          // Heading
+          const h1 = document.createElement('h1');
+          h1.textContent = section.Name;
+          main.appendChild(h1);
+
+          // Description or Note (if available)
+          if (section.Description) {
+            const p = document.createElement('p');
+            p.textContent = section.Description;
+            main.appendChild(p);
+          }
+
+          if (section.Note) {
+            const note = document.createElement('p');
+            note.innerHTML = `<em>${section.Note}</em>`;
+            main.appendChild(note);
+          }
+
+          // Content (array)
+          if (section.Content && Array.isArray(section.Content)) {
+            const ulContent = document.createElement('ul');
+            section.Content.forEach(item => {
+              const li = document.createElement('li');
+              li.textContent = item;
+              ulContent.appendChild(li);
+            });
+            main.appendChild(ulContent);
+          }
+
+          // Subheadings (if available)
+          if (section.Subheadings && Array.isArray(section.Subheadings)) {
+            section.Subheadings.forEach(sub => {
+              const h3 = document.createElement('h3');
+              h3.textContent = sub.Name;
+              main.appendChild(h3);
+
+              const ulSub = document.createElement('ul');
+              sub.Content.forEach(point => {
+                const li = document.createElement('li');
+                li.textContent = point;
+                ulSub.appendChild(li);
+              });
+              main.appendChild(ulSub);
+            });
+          }
+        });
+
+        ul.appendChild(li);
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching JSON:", error);
+    });
+
+  </script>
+</body>
+</html>
