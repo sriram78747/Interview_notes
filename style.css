@@ -81,10 +81,24 @@ body {
   text-decoration: none;
   font-size: 20px;
 }
+@keyframes moveInOut {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .sidebar ul li a:hover {
   font-size: 25px;
   opacity: 0.5;
+  animation: moveInOut 0.4s ease;
 }
+
 
 .content {
   flex: 1;
